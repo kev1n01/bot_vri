@@ -28,6 +28,7 @@ const chatWoot = async (req, res) => {
  */
 router.post('/chatwoot', chatWoot)
 
+
 router.get("/get-qr", async (_, res) => {
     const PATH = join(process.cwd(), 'bot.qr.png')
     const fileStream = createReadStream(PATH)
