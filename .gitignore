@@ -11,4 +11,4 @@ tmp/*
 *.log
 *qr.png
 
-./database.json
+database.json
