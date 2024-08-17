@@ -20,6 +20,8 @@ const aiFlow = addKeyword<Provider, Database>(utils.setEvent('AI_FLOW'))
         const response = await toAsk(ASSISTANT_ID, state.get('consultai'), state)
         // const chunks = response.split(/\n\n+/);
         await flowDynamic([{ body: response.trim() }]);
+
+        return gotoFlow(aiFlow)
         // for (const chunk of chunks) {
         // }
     })
