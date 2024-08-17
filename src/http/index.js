@@ -16,10 +16,6 @@ class ServerHttp {
                 req.providerWs = this.providerWs
                 next()
             })
-            .use('/api', createProxyMiddleware({
-                target: 'http://localhost:3000',
-                changeOrigin: true
-            }))
             .use(routes)
             .listen(this.port, () => console.log(`Server running on port ${this.port}`))
     }
