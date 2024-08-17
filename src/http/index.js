@@ -3,7 +3,7 @@ import express from 'express'
 import routes from './routes/route-chatwoot'
 class ServerHttp {
     app;
-    port = process.env.PORT ?? 3003
+    port = process.env?.PORT_API ?? 3000
     providerWs;
     constructor(_providerWs) {
         this.providerWs = _providerWs
