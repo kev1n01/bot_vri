@@ -6,6 +6,7 @@ import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
 import { toAsk, httpInject } from "@builderbot-plugins/openai-assistants"
 import { join } from "path";
 import ServerHttp from "./http/index"
+import sendMessageFromChatWood from "./services/chatwood-conexion";
 
 const PORT = process.env?.PORT ?? 3008
 const ASSISTANT_ID = process.env?.ASSISTANT_ID ?? ''
@@ -67,11 +68,20 @@ const flowToOption1 = addKeyword<Provider, Database>(EVENTS.ACTION)
 
 
 const flowToOption2 = addKeyword<Provider, Database>(EVENTS.ACTION)
-    .addAnswer(
-        'Ingresa a la plataforma tu coach desde el enlace https://tucoach.udh.edu.pe/ y sigue el manual de usuario',
-        { media: join(process.cwd(), 'assets', 'manual_de_usuario_tu_coach.pdf') }, async (_, { gotoFlow }) => {
-            return gotoFlow(flowContinueMenu)
-        }
+    // .addAnswer(
+    //     'Ingresa a la plataforma tu coach desde el enlace https://tucoach.udh.edu.pe/ y sigue el manual de usuario',
+    //     { media: join(process.cwd(), 'assets', 'manual_de_usuario_tu_coach.pdf') }, async (_, { gotoFlow }) => {
+    //         await sendMessageFromChatWood('Ingresa a la plataforma tu coach desde el enlace https://tucoach.udh.edu.pe/ y sigue el manual de usuario', 'incoming')
+    //         return gotoFlow(flowContinueMenu)
+    //     }
+    // )
+    .addAction(async (_, { gotoFlow, flowDynamic }) => {
+        const MENSAJE = 'Ingresa a la plataforma tu coach desde el enlace https://tucoach.udh.edu.pe/ y sigue el manual de usuario'
+        await sendMessageFromChatWood(MENSAJE, 'incoming')
+        await flowDynamic(MENSAJE)
+        await flowDynamic([{ body: 'waa', media: join(process.cwd(), 'assets', 'manual_de_usuario_tu_coach.pdf')  }])
+        return gotoFlow(flowContinueMenu)
+    }
     )
 
 const flowToOption3 = addKeyword<Provider, Database>(utils.setEvent('STATUS_FLOW'))

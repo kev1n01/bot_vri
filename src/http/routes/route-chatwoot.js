@@ -10,9 +10,13 @@ const router = express.Router()
  * @param {*} res
  */
 const chatWoot = async (req, res) => {
-    const providerWs = req.providerWs 
+    const providerWs = req.providerWs
     const body = req.body
-    const phone = body?.conversation?.meta?.sender?.phone_number.replace('+','')
+    if (body?.private) { //para no duplicar mensajes
+        res.send(null)
+        return
+    }
+    const phone = body?.conversation?.meta?.sender?.phone_number.replace('+', '')
     console.log(phone);
     await providerWs.sendText(`${phone}@c.us`, body.content)
     res.send(body)
