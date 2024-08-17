@@ -1,0 +1,25 @@
+[
+  {
+    "ref": "73a75caa-7b2d-48c2-8519-9494aabd3de8",
+    "keyword": "1c3b018b6a19bfd9e3362367cf37e5c5",
+    "answer": "Hola",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
+  },
+  {
+    "ref": "ans_95e06c22-194d-4e84-8ba1-ee800e60c6d7",
+    "keyword": "key_05b0f3ce-ec42-4e26-88cc-126c257631b7",
+    "answer": "Hola!!🤗 Bienvenido al soporte virtual del VRI\nEscoja la mejor opción para ayudarle en su consulta?\n1. Cómo registro en el concurso de proyectos de investigación?\n2. Cómo ingresar a tu coach?\n3. Quiero saber el estado de mi trámite\n4. Cuál es el procedimiento para la revisiones\n5. Porqué tengo observaciones?\n6. Comunicate con nuestro personal para una consulta más especifica",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "ce7a0577e8ef939d7c39e7e53ab98736",
+    "from": "51933865935"
+  }
+]
