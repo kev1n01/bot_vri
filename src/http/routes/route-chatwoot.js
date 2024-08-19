@@ -3,12 +3,7 @@ import { join } from 'path'
 import express from 'express'
 
 const router = express.Router()
-/**
- * Routes
- * 
- * @param {*} req 
- * @param {*} res
- */
+
 const chatWoot = async (req, res) => {
     const providerWs = req.providerWs
     const body = req.body
@@ -22,12 +17,7 @@ const chatWoot = async (req, res) => {
     res.send(body)
 }
 
-
-/**
- * Controller
- */
 router.post('/chatwoot', chatWoot)
-
 
 router.get("/get-qr", async (_, res) => {
     const PATH = join(process.cwd(), 'bot.qr.png')

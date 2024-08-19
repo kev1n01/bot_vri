@@ -7,6 +7,7 @@ import { toAsk, httpInject } from "@builderbot-plugins/openai-assistants"
 import { join } from "path";
 import ServerHttp from "./http/index"
 import sendMessageFromChatWood from "./services/chatwood-conexion";
+import validateStatusTransaction from "./services/google-sheets";
 
 const PORT = process.env?.PORT ?? 3008
 const ASSISTANT_ID = process.env?.ASSISTANT_ID ?? ''
@@ -15,29 +16,25 @@ const aiFlow = addKeyword<Provider, Database>(utils.setEvent('AI_FLOW'))
     .addAnswer(`Con qué otra consulta te puedo ayudar? `, { capture: true }, async (ctx, { state }) => {
         await state.update({ consultai: ctx.body })
     })
-    .addAction(async (_, { flowDynamic, gotoFlow, state, provider }) => {
+    .addAction(async (_, { flowDynamic, gotoFlow, state }) => {
         // await typing(ctx, provider)
         const response = await toAsk(ASSISTANT_ID, state.get('consultai'), state)
-        // const chunks = response.split(/\n\n+/);
         await flowDynamic([{ body: response.trim() }]);
-
         return gotoFlow(aiFlow)
-        // for (const chunk of chunks) {
-        // }
     })
 
 const flowContinueMenu = addKeyword<Provider, Database>(EVENTS.ACTION)
-    .addAnswer(`Quieres escoger otra opción?\n 1. Si\n 2. No`, { capture: true }, async (ctx, { state, gotoFlow, flowDynamic }) => {
-        if (ctx.body.toLocaleLowerCase().includes('1')) {
+    .addAnswer(`Quieres escoger otra opción?(Si/No)`, { capture: true }, async (ctx, { gotoFlow}) => {
+        if (ctx.body.toLocaleLowerCase().includes('Si')) {
             return gotoFlow(flowSelectOption)
         }
         return gotoFlow(byeFlow)
     })
 
 const flowSelectOption = addKeyword<Provider, Database>(EVENTS.ACTION)
-    .addAnswer(`Escoge una de las opciones: 1. Cómo registro en el concurso de proyectos de investigación?\n2. Cómo ingresar a tu coach?\n3. Quiero saber el estado de mi trámite\n4. Cuál es el procedimiento para la revisiones\n5. Porqué tengo observaciones?\n6. Comunicate con nuestro personal para una consulta más especifica`,
+    .addAnswer(`Escoge otra opción:\n1️⃣ Cómo me registro en el concurso de proyectos de investigación?\n2️⃣. Cómo ingreso a tu coach?\n3️⃣. Quiero saber el estado de mi trámite\n4️⃣. Cuál es el procedimiento para la revisiones?\n5️⃣. Porqué tengo observaciones?\n6️⃣. Quiero hacer una pregunta más específica`,
         { capture: true },
-        async (ctx, { gotoFlow, flowDynamic }) => {
+        async (ctx, { gotoFlow }) => {
             switch (ctx.body) {
                 case '1':
                     return gotoFlow(flowToOption1)
@@ -60,7 +57,7 @@ const flowSelectOption = addKeyword<Provider, Database>(EVENTS.ACTION)
 const byeFlow = addKeyword<Provider, Database>(['bye', 'gracias', 'adios', 'hasta pronto', 'ok', EVENTS.ACTION])
     .addAction(async (ctx, { flowDynamic }) => {
         const name = ctx.name
-        await flowDynamic([`Fue un placer estimado(a) ${name}`])
+        await flowDynamic([`Fue un placer ayudarlo estimado(a) ${name}`])
     })
 
 const flowToOption1 = addKeyword<Provider, Database>(EVENTS.ACTION)
@@ -73,7 +70,6 @@ const flowToOption2 = addKeyword<Provider, Database>(EVENTS.ACTION)
 
     .addAction(async (_, { gotoFlow, flowDynamic }) => {
         const MENSAJE = 'Ingresa a la plataforma tu coach desde el enlace https://tucoach.udh.edu.pe/ y sigue el manual de usuario'
-        await sendMessageFromChatWood(MENSAJE, 'incoming')
         await flowDynamic(MENSAJE)
         await flowDynamic([{ body: 'waa', media: join(process.cwd(), 'assets', 'manual_de_usuario_tu_coach.pdf') }])
         return gotoFlow(flowContinueMenu)
@@ -81,17 +77,20 @@ const flowToOption2 = addKeyword<Provider, Database>(EVENTS.ACTION)
     )
 
 const flowToOption3 = addKeyword<Provider, Database>(utils.setEvent('STATUS_FLOW'))
-    .addAnswer(`Cuál es tu código?`, { capture: true }, async (ctx, { state, fallBack, gotoFlow }) => {
+    .addAnswer('Cuál es tu código?', { capture: true }, async (ctx, { state }) => {
         await state.update({ code: ctx.body })
-        if (ctx.body.length != 10) {
-            return fallBack(`El código que ingreso es incorrecto`);
-        }
-        return gotoFlow(flowToOption3)
     })
     .addAction(async (_, { flowDynamic, gotoFlow, state }) => {
-        await state.update({ status: 'sin revisar' })
-        await flowDynamic(`El estado de tu trámite es: ${state.get('status')}`)
-        return gotoFlow(flowContinueMenu)
+        const code = state.get<string>('code')
+        if (code.length != 10) {
+            await flowDynamic('El código es incorrecto, intenta de nuevo');
+            return gotoFlow(flowToOption3)
+        } else {
+
+            const res = await validateStatusTransaction(code)
+            await flowDynamic(res)
+            return gotoFlow(flowContinueMenu)
+        }
     })
 
 const flowToOption4 = addKeyword<Provider, Database>(EVENTS.ACTION)
@@ -108,21 +107,22 @@ const flowToOption5 = addKeyword<Provider, Database>(EVENTS.ACTION)
         return gotoFlow(flowContinueMenu)
     })
 
-
 const flowToOption6 = addKeyword<Provider, Database>([EVENTS.ACTION, 'comunicarme', 'hablar'])
-    // .addAnswer(['Si deseas comunicarte con nuestro personal para una consulta más especifica contactanos al: \n-933865935\n-soporte_vri@udh.edu.pe'], null, async (_, { gotoFlow }) => {
-    //     await gotoFlow(flowContinueMenu)
-    // })
-    .addAction(async (_, { gotoFlow, flowDynamic }) => {
-        await flowDynamic('Si deseas comunicarte con nuestro personal para una consulta más especifica contactanos al: \n-933865935\n-soporte_vri@udh.edu.pe')
-        return gotoFlow(flowContinueMenu)
+    .addAction(async (_, { flowDynamic }) => {
+        const MENSAJE = 'Si deseas comunicarte con nuestro personal para una consulta más especifica contactanos al: \n-933865935\n-soporte_vri@udh.edu.pe'
+        try {
+            await sendMessageFromChatWood('Necesito soporte personalizado', 'incoming')
+        } catch (error) {
+            console.log(error)
+        }
+        await flowDynamic(MENSAJE)
     })
 
 const welcomeFlow = addKeyword<Provider, Database>(EVENTS.WELCOME)
     .addAnswer(
         [
-            `Hola!!🤗 Bienvenido al soporte virtual del VRI`,
-            `Escoja la mejor opción para ayudarle en su consulta?\n1. Cómo registro en el concurso de proyectos de investigación?\n2. Cómo ingresar a tu coach?\n3. Quiero saber el estado de mi trámite\n4. Cuál es el procedimiento para la revisiones\n5. Porqué tengo observaciones?\n6. Comunicate con nuestro personal para una consulta más especifica`,
+            `Hola!!🤗 Bienvenido gracias por comunicarte con el VRI`,
+            `Escoja la mejor opción para su consulta:\n1️⃣ Cómo me registro en el concurso de proyectos de investigación?\n2️⃣. Cómo ingreso a tu coach?\n3️⃣. Quiero saber el estado de mi trámite\n4️⃣. Cuál es el procedimiento para la revisiones?\n5️⃣. Porqué tengo observaciones?\n6️⃣. Quiero comunicarme con el soporte`,
         ],
         { capture: true },
         async (ctx, { gotoFlow }) => {
@@ -148,10 +148,8 @@ const welcomeFlow = addKeyword<Provider, Database>(EVENTS.WELCOME)
 const comunicationFlow = addKeyword<Provider, Database>(['comunicate', 'comunicarme', 'comunicar', 'hablar', 'charlar', 'conversar', 'comunico', EVENTS.ACTION])
     .addAnswer(['Si deseas comunicarte con nuestro personal para una consulta más especifica llama al número 933865935 o escribe a soporte_vri@udh.edu.pe'])
 
-
-
 // Apagar el bot para un usuario
-const flowOffOneUser = addKeyword<Provider>('apagar')
+const flowOffOneUser = addKeyword<Provider>('apagaruser')
     .addAction(async (_, { state, endFlow }) => {
         const botOffForThisUser = state.get<boolean>('botOffForThisUser')
         await state.update({ botOffForThisUser: !botOffForThisUser })
@@ -160,7 +158,7 @@ const flowOffOneUser = addKeyword<Provider>('apagar')
     .addAnswer('Hello!')
 
 // Apagar el bot para todos los usuarios
-const flowOffEveryOne = addKeyword<Provider>('botoff')
+const flowOffEveryOne = addKeyword<Provider>('apagartodos')
     .addAction(async (_, { globalState, endFlow }) => {
         const botOffForEveryOne = globalState.get<boolean>('botOffForEveryOne')
         await globalState.update({ botOffForEveryOne: !botOffForEveryOne })

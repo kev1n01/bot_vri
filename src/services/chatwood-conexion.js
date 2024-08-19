@@ -3,7 +3,7 @@ import "dotenv/config"
 const sendMessageFromChatWood = async (message = "", message_type = "") => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("api_access_token", process.env?.CHATWOOT_ACCESS_TOKEN);
+    myHeaders.append("api_access_token", "YkrVgZz7CfR2BJuz6DEgANBq");
 
     var raw = JSON.stringify({
         content: message,
@@ -20,7 +20,7 @@ const sendMessageFromChatWood = async (message = "", message_type = "") => {
     };
 
     const dataRaw = await fetch(
-        "https://chatwoot-production-1e10.up.railway.app/api/v1/accounts/1/conversations/1/messages",
+        "https://chatwoot-production-1e10.up.railway.app/api/v1/accounts/2/conversations/1/messages",
         requestOptions
     )
     const data = await dataRaw.json()
