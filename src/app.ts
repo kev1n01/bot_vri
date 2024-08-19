@@ -24,15 +24,15 @@ const aiFlow = addKeyword<Provider, Database>(utils.setEvent('AI_FLOW'))
     })
 
 const flowContinueMenu = addKeyword<Provider, Database>(EVENTS.ACTION)
-    .addAnswer(`Quieres escoger otra opción?(Si/No)`, { capture: true }, async (ctx, { gotoFlow}) => {
-        if (ctx.body.toLocaleLowerCase().includes('Si')) {
+    .addAnswer(`Quieres escoger otra opción?\n1️⃣ Si\n2️⃣ No`, { capture: true }, async (ctx, { gotoFlow }) => {
+        if (ctx.body.toLocaleLowerCase().includes('1')) {
             return gotoFlow(flowSelectOption)
         }
         return gotoFlow(byeFlow)
     })
 
 const flowSelectOption = addKeyword<Provider, Database>(EVENTS.ACTION)
-    .addAnswer(`Escoge otra opción:\n1️⃣ Cómo me registro en el concurso de proyectos de investigación?\n2️⃣. Cómo ingreso a tu coach?\n3️⃣. Quiero saber el estado de mi trámite\n4️⃣. Cuál es el procedimiento para la revisiones?\n5️⃣. Porqué tengo observaciones?\n6️⃣. Quiero hacer una pregunta más específica`,
+    .addAnswer(`Escoge otra opción:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica`,
         { capture: true },
         async (ctx, { gotoFlow }) => {
             switch (ctx.body) {
@@ -48,8 +48,10 @@ const flowSelectOption = addKeyword<Provider, Database>(EVENTS.ACTION)
                     return gotoFlow(flowToOption5)
                 case '6':
                     return gotoFlow(flowToOption6)
-                default:
+                case '7':
                     return gotoFlow(aiFlow)
+                default:
+                    return gotoFlow(flowSelectOption)
             }
         }
     )
@@ -83,12 +85,15 @@ const flowToOption3 = addKeyword<Provider, Database>(utils.setEvent('STATUS_FLOW
     .addAction(async (_, { flowDynamic, gotoFlow, state }) => {
         const code = state.get<string>('code')
         if (code.length != 10) {
-            await flowDynamic('El código es incorrecto, intenta de nuevo');
+            await flowDynamic(`El código ${code} es incorrecto, intenta de nuevo`);
             return gotoFlow(flowToOption3)
         } else {
-
             const res = await validateStatusTransaction(code)
-            await flowDynamic(res)
+            if (!res) {
+                await flowDynamic(`El código ${code} no se encuentra registrado, intenta de nueva`);
+                return gotoFlow(flowToOption3)
+            }
+            await flowDynamic(`El estado de tu trámite está:  ${res.estado}`);
             return gotoFlow(flowContinueMenu)
         }
     })
@@ -122,7 +127,7 @@ const welcomeFlow = addKeyword<Provider, Database>(EVENTS.WELCOME)
     .addAnswer(
         [
             `Hola!!🤗 Bienvenido gracias por comunicarte con el VRI`,
-            `Escoja la mejor opción para su consulta:\n1️⃣ Cómo me registro en el concurso de proyectos de investigación?\n2️⃣. Cómo ingreso a tu coach?\n3️⃣. Quiero saber el estado de mi trámite\n4️⃣. Cuál es el procedimiento para la revisiones?\n5️⃣. Porqué tengo observaciones?\n6️⃣. Quiero comunicarme con el soporte`,
+            `Escoja la mejor opción para su consulta:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica`,
         ],
         { capture: true },
         async (ctx, { gotoFlow }) => {
@@ -139,8 +144,10 @@ const welcomeFlow = addKeyword<Provider, Database>(EVENTS.WELCOME)
                     return gotoFlow(flowToOption5)
                 case '6':
                     return gotoFlow(flowToOption6)
-                default:
+                case '7':
                     return gotoFlow(aiFlow)
+                default:
+                    return gotoFlow(flowSelectOption)
             }
         },
     )

@@ -7,16 +7,10 @@ const validateStatusTransaction = async (code) => {
         // Filtrar el estado según el código
         const transaction = data.find(item => item.codigo === code);
 
-        // Si no se encuentra el código, lanzar un error
-        if (!transaction) {
-            return `El código ${code} no existe`;
-        }
-
-        // Retornar el estado si se encontró el código
-        return `El estado de tu trámite está:  ${transaction.estado}`;
+        // Retornar la informacion filtrada
+        return transaction
     } catch (error) {
-        console.error('Error:', error);
-        return `Error causita`;
+        console.error('Error: conexion con make no establecida', error);
     }
 };
 
