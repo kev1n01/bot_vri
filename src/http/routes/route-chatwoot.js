@@ -7,6 +7,7 @@ const router = express.Router()
 const chatWoot = async (req, res) => {
     const providerWs = req.providerWs
     const body = req.body
+    console.log(body);
     if (body?.private) { //para no duplicar mensajes
         res.send(null)
         return

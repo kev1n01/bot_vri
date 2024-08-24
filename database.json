@@ -1,16 +1,52 @@
 [
   {
-    "ref": "73a75caa-7b2d-48c2-8519-9494aabd3de8",
-    "keyword": "1c3b018b6a19bfd9e3362367cf37e5c5",
+    "ref": "92286692-6bbe-491e-827f-529ebf673e51",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "Hey",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "277c8cb949f2e3dbc96f9369fddf7be3"
+  },
+  {
+    "ref": "3e00b571-fb5a-4d51-8c3f-2041c92e554e",
+    "keyword": "277c8cb949f2e3dbc96f9369fddf7be3",
     "answer": "Hola",
     "options": {},
     "from": "51933865935",
     "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
   },
   {
-    "ref": "ans_95e06c22-194d-4e84-8ba1-ee800e60c6d7",
-    "keyword": "key_05b0f3ce-ec42-4e26-88cc-126c257631b7",
-    "answer": "Hola!!🤗 Bienvenido al soporte virtual del VRI\nEscoja la mejor opción para ayudarle en su consulta?\n1. Cómo registro en el concurso de proyectos de investigación?\n2. Cómo ingresar a tu coach?\n3. Quiero saber el estado de mi trámite\n4. Cuál es el procedimiento para la revisiones\n5. Porqué tengo observaciones?\n6. Comunicate con nuestro personal para una consulta más especifica",
+    "ref": "ans_a6951b80-3786-4e6f-a359-cca343a9e0de",
+    "keyword": "key_0063423e-d078-4ff3-9cfb-6c38cbccb783",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "0e4769f0e1909f43ec26079f677ec3ea",
+    "from": "51933865935"
+  },
+  {
+    "ref": "67f7a4fd-ee33-4cf6-9d47-08e6f158f462",
+    "keyword": null,
+    "answer": "¡Hola Kevin Flores! Soy VRIBOT UDH, tu asistente virtual 🤖",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "003e01a1618b12604e5009dca7734709"
+  },
+  {
+    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
+    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
+    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
     "options": {
       "buttons": [],
       "capture": true,
@@ -19,7 +55,274 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "ce7a0577e8ef939d7c39e7e53ab98736",
+    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
     "from": "51933865935"
+  },
+  {
+    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
+    "from": "51933865935"
+  },
+  {
+    "ref": "a91ee4c3-681d-40cd-a1c6-f98cf153d36c",
+    "keyword": null,
+    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
+  },
+  {
+    "ref": "00620f53-07c6-42b4-8f7e-be9c183c3db3",
+    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "01ed7409-bc32-420a-ba09-6c4f20edf55d",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "Opciones",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "81593e657953eced63679438e20dd8f1"
+  },
+  {
+    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
+    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
+    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
+    "from": "51933865935"
+  },
+  {
+    "ref": "6e8487b1-dfcd-4dc3-a324-e2590ff35fc6",
+    "keyword": "b0e936a41ebc047de1cbe003fcca6c04",
+    "answer": "3",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_e4e3d89f-c1f2-4cd0-b4e5-4e446ef0f565",
+    "keyword": "key_647fb767-ad26-4b2e-9a01-cac4c93bf197",
+    "answer": "Ingresa tu código o escribe 0️⃣ para cancelar",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "716eb9fe3ac5b781551149be1e253375",
+    "from": "51933865935"
+  },
+  {
+    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
+    "from": "51933865935"
+  },
+  {
+    "ref": "5427f108-f5ca-4a78-a91b-110ce4773449",
+    "keyword": null,
+    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
+  },
+  {
+    "ref": "f8f64312-a67c-4f49-bbb6-63901e613c20",
+    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "4a9bbc08-c46c-4296-afc5-9e2a28e6a250",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "Opcion",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "743a3bd8abd988164c391e368ae4f29f"
+  },
+  {
+    "ref": "8e455e62-4e0d-4b3e-93de-b90448c9f7c9",
+    "keyword": "743a3bd8abd988164c391e368ae4f29f",
+    "answer": "Ljlhll",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "33b8bfb5afb6650362363134c56a5b53"
+  },
+  {
+    "ref": "3f8c1f60-76b9-4900-88fb-b568804bb549",
+    "keyword": "33b8bfb5afb6650362363134c56a5b53",
+    "answer": "Opciones",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "81593e657953eced63679438e20dd8f1"
+  },
+  {
+    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
+    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
+    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
+    "from": "51933865935"
+  },
+  {
+    "ref": "2086133f-a2c8-4623-8ddd-686013b89a9c",
+    "keyword": "b0e936a41ebc047de1cbe003fcca6c04",
+    "answer": "3",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_e4e3d89f-c1f2-4cd0-b4e5-4e446ef0f565",
+    "keyword": "key_647fb767-ad26-4b2e-9a01-cac4c93bf197",
+    "answer": "Ingresa tu código o escribe 0️⃣ para cancelar",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "716eb9fe3ac5b781551149be1e253375",
+    "from": "51933865935"
+  },
+  {
+    "ref": "9c669ff3-189f-422c-ac59-9bfddc9e4b96",
+    "keyword": "716eb9fe3ac5b781551149be1e253375",
+    "answer": "2018110451",
+    "options": {},
+    "from": "51933865935",
+    "refSerialize": "538febcd810ad5aa46bff28f98abcab3"
+  },
+  {
+    "ref": "69c6feca-6c29-4fdb-b169-70eedd645a3c",
+    "keyword": null,
+    "answer": "Estimado kevin arnold flores pacheco, el estado de tu trámite está:  con observaciones",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "374fc31ede26fffaf4153165eace7cc4"
+  },
+  {
+    "ref": "ans_ce7e88c3-fc81-4ed5-9cd7-e7a15a8c45cd",
+    "keyword": "key_09afcb2c-8c78-461b-9232-ddd80d7b5efc",
+    "answer": "Quieres escoger otra opción?\n 1️⃣ Si\n 2️⃣ No",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "3453654ca76255ca937412830ed07a18",
+    "from": "51933865935"
+  },
+  {
+    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
+    "from": "51933865935"
+  },
+  {
+    "ref": "23958d49-7a2f-4b7a-877b-50d4faf5fedf",
+    "keyword": null,
+    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
+  },
+  {
+    "ref": "9702ea35-6298-4ab9-a991-7284f2c57d84",
+    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51933865935",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
   }
 ]
