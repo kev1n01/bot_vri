@@ -16,7 +16,7 @@ export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones
         `*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar`,
         { capture: true }, async (ctx, { fallBack, endFlow, gotoFlow }) => {
             if (!['1', '2', '3', '4', '5', '6', '7', '0'].includes(ctx.body)) {
-                reset(ctx, gotoFlow, 20000)
+                reset(ctx, gotoFlow, 200000)
                 return fallBack('Por favor elige una opción válida (0-7)')
             }
             if (ctx.body === '0') {
@@ -31,7 +31,7 @@ export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones
                     stop(ctx)
                     return gotoFlow(option2Flow)
                 case '3':
-                    start(ctx, gotoFlow, 30000)
+                    start(ctx, gotoFlow, 200000)
                     return gotoFlow(option3Flow)
                 case '4':
                     stop(ctx)
@@ -43,7 +43,7 @@ export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones
                     stop(ctx)
                     return gotoFlow(option6Flow)
                 case '7':
-                    start(ctx, gotoFlow, 100000)
+                    start(ctx, gotoFlow, 400000)
                     return gotoFlow(option7Flow)
             }
         })
