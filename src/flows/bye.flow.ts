@@ -1,9 +1,11 @@
-import { addKeyword } from '@builderbot/bot';
+import { EVENTS, addKeyword } from '@builderbot/bot';
+import { stop } from './idle-custom';
 /**
  *  Responde cuando el usuario se despide
  */
-export const byeFlow = addKeyword(['bye', 'gracias', 'adios', 'adiós', 'listo', 'queda', 'ok'])
+export const byeFlow = addKeyword(EVENTS.ACTION)
     .addAction(async (ctx, { endFlow }) => {
-        return endFlow(`Fue un placer ayudarlo estimado(a) ${ctx.name}, accede a las opciones escribiendo *Opciones*`)
+        stop(ctx)
+        return endFlow(`Fue un placer ayudarlo estimado(a) ${ctx.name}, accede a las opciones escribiendo "*Opciones*"`)
     }
     )

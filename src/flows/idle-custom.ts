@@ -1,13 +1,16 @@
 import { EVENTS, addKeyword } from '@builderbot/bot'
 import { BotContext, TFlow } from '@builderbot/bot/dist/types';
 
+const TIMEOUT_SMALL = 300000;
+const TIMEOUT_LARGE = 400000;
+
 // Object to store timers for each user
 const timers = {};
 
 // Flow for handling inactivity
 const idleFlow = addKeyword(EVENTS.ACTION).addAction(
     async (ctx, { endFlow }) => {
-        return endFlow(`🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto ${ctx.name}😊!`);
+        return endFlow(`Daré por finalizada mi atención. Si me necesitas de nuevo escribe "*Opciones*". ¡Hasta pronto ${ctx.name} 😊!`);
     }
 );
 
@@ -41,4 +44,6 @@ export {
     reset,
     stop,
     idleFlow,
+    TIMEOUT_SMALL,
+    TIMEOUT_LARGE
 }
