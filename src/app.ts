@@ -10,7 +10,7 @@ import ServerHttp from "./http/index"
 const PORT = process.env?.PORT ?? 3008
 
 const main = async () => {
-    const adapterProvider = createProvider(Provider, { useBaileysStore: true, timeRelease: 1080000, writeMyself: false })
+    const adapterProvider = createProvider(Provider, { writeMyself: false, useBaileysStore: true, timeRelease: 1080000 })
     const adapterDB = new Database({ filename: 'database.json' })
 
     const { httpServer } = await createBot({
@@ -19,17 +19,16 @@ const main = async () => {
         database: adapterDB,
     }, {
         queue: {
-            timeout: 20000,
+            timeout: 60000,
             concurrencyLimit: 100
         }
     })
+
     httpInject(adapterProvider.server)
     httpServer(+PORT)
 
     const server = new ServerHttp(adapterProvider)
     server.start()
 }
-
-
 
 main()
