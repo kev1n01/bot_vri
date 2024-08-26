@@ -20,6 +20,7 @@ export const soporteDeacheFlow = addKeyword(EVENTS.ACTION)
             return gotoFlow(soporteDeacheFlow)
         } catch (error) {
             await flowDynamic('Lo siento por el momento no puedo resolver tu consulta, intenta de nuevo');
+            reset(ctx, gotoFlow, TIMEOUT_SMALL)
             return gotoFlow(listFlow)
         }
     })

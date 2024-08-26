@@ -19,7 +19,7 @@ export const estadoFlow = addKeyword(EVENTS.ACTION)
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
                 return fallBack(`El nombre ${ctx.body} no se encuentra registrado, intenta de nuevo o elige 0️⃣ para volver`);
             }
-            await flowDynamic(`Estimado(a) ${normalizeName(res.nombres)}, el estado de tu trámite está:  ${res.estado}`);
+            await flowDynamic(`Estimado(a) ${normalizeName(res.nombres)}, el *estado* de tu trámite es el siguiente:}\n👉 ${res.estado}`);
 
             // if (ctx.body.length != 10) {
             //     reset(ctx, gotoFlow, TIMEOUT_SMALL)
