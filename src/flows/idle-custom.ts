@@ -10,7 +10,7 @@ const timers = {};
 // Flow for handling inactivity
 const idleFlow = addKeyword(EVENTS.ACTION).addAction(
     async (ctx, { endFlow }) => {
-        return endFlow(`Daré por finalizada mi atención. Si me necesitas de nuevo escribe "*Opciones*". ¡Hasta pronto ${ctx.name} 😊!`);
+        return endFlow();
     }
 );
 
