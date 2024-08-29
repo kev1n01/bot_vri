@@ -15,11 +15,15 @@ const validateStatusTransaction = async (code) => {
 };
 
 const normalizeName = (name) => {
-    return name
-        .toLowerCase()           // Convertir a minúsculas
-        .replace(/[.,;]/g, ' ')   // Eliminar comas, puntos, y punto y comas
-        .replace(/\s+/g, ' ')    // Reemplazar múltiples espacios por un solo espacio
-        .trim();                 // Eliminar espacios al inicio y al final
+    try {
+        return name
+            .toLowerCase()           // Convertir a minúsculas
+            .replace(/[.,;]/g, ' ')   // Eliminar comas, puntos, y punto y comas
+            .replace(/\s+/g, ' ')    // Reemplazar múltiples espacios por un solo espacio
+            .trim();                 // Eliminar espacios al inicio y al final
+    }catch{
+        console.log('Error: no se pudo normalizar el nombre');
+    }
 };
 
 const validateStatusTransactionReal = async (full_name) => {

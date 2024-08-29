@@ -17,7 +17,7 @@ const idleFlow = addKeyword(EVENTS.ACTION).addAction(
 // Function to start the inactivity timer for a user
 const start = (ctx: BotContext, gotoFlow: (a: TFlow) => Promise<void>, ms: number) => {
     timers[ctx.from] = setTimeout(() => {
-        console.log(`User timeout: ${ctx.from} ${ctx.name}`);
+        console.log(`User timeout: ${ctx.from} ${ctx.name} ${ms}`);
         return gotoFlow(idleFlow);
     }, ms);
 }
@@ -26,7 +26,7 @@ const start = (ctx: BotContext, gotoFlow: (a: TFlow) => Promise<void>, ms: numbe
 const reset = (ctx: BotContext, gotoFlow: (a: TFlow) => Promise<void>, ms: number) => {
     stop(ctx);
     if (timers[ctx.from]) {
-        console.log(`reset countdown for the user: ${ctx.from} ${ctx.name}`);
+        console.log(`reset countdown for the user: ${ctx.from} ${ctx.name} ${ms}`);
         clearTimeout(timers[ctx.from]);
     }
     start(ctx, gotoFlow, ms);
