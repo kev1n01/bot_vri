@@ -7,13 +7,13 @@ import { estadoFlow } from "./estadoFlow";
 import { problemaCoachFlow } from "./problemaCoachFlow";
 import { soporteFlow } from "./soporteFlow";
 import { soporteDeacheFlow } from "./soporteDeacheFlow";
-
+import { atentionFlow } from "./atentionFlow";
 
 export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones"])
     .addAnswer(
-        `*Elige una opción*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach \n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)* 😎\n\n 0️⃣ Cancelar consulta`,
+        `*Elige una opción*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach \n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*\n 6️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta`,
         { capture: true }, async (ctx, { fallBack, endFlow, gotoFlow }) => {
-            if (!['1', '2', '3', '4', '5', '0'].includes(ctx.body)) {
+            if (!['1', '2', '3', '4', '5', '6', '0'].includes(ctx.body)) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
                 return fallBack('Por favor elige una opción válida entre *(0-5)*')
             }
@@ -37,5 +37,7 @@ export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones
                 case '5':
                     reset(ctx, gotoFlow, TIMEOUT_LARGE)
                     return gotoFlow(soporteDeacheFlow)
+                case '6':
+                    return gotoFlow(atentionFlow)
             }
         })

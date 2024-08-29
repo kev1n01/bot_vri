@@ -1,6 +1,6 @@
 import { EVENTS, addKeyword } from "@builderbot/bot"
 import { join } from "path"
-import { TIMEOUT_SMALL, reset, stop } from "../idle-custom"
+import { TIMEOUT_SMALL, reset } from "../idle-custom"
 import { listFlow } from "./listFlow"
 
 export const problemaCoachFlow = addKeyword(EVENTS.ACTION)
