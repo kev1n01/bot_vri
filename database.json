@@ -1,23 +1,15 @@
 [
   {
-    "ref": "92286692-6bbe-491e-827f-529ebf673e51",
-    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
-    "answer": "Hey",
+    "ref": "a83b6905-ead0-4bc3-8df6-dc4ef279f780",
+    "keyword": "5ee406767dd95e5e858960f14122db2d",
+    "answer": "Holaa",
     "options": {},
-    "from": "51933865935",
-    "refSerialize": "277c8cb949f2e3dbc96f9369fddf7be3"
+    "from": "51963422374",
+    "refSerialize": "9d3de55f154f6cc76aaed03e67b2d7c0"
   },
   {
-    "ref": "3e00b571-fb5a-4d51-8c3f-2041c92e554e",
-    "keyword": "277c8cb949f2e3dbc96f9369fddf7be3",
-    "answer": "Hola",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
-  },
-  {
-    "ref": "ans_a6951b80-3786-4e6f-a359-cca343a9e0de",
-    "keyword": "key_0063423e-d078-4ff3-9cfb-6c38cbccb783",
+    "ref": "ans_37de00d4-3069-4052-8948-a9afd8abe588",
+    "keyword": "key_0f67892b-6764-4660-ab3c-96b726a24447",
     "answer": "__call_action__",
     "options": {
       "buttons": [],
@@ -27,26 +19,26 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "0e4769f0e1909f43ec26079f677ec3ea",
-    "from": "51933865935"
+    "refSerialize": "09a0bb5a2e3d9c3bd0341db51adf6173",
+    "from": "51963422374"
   },
   {
-    "ref": "67f7a4fd-ee33-4cf6-9d47-08e6f158f462",
+    "ref": "5c5b66e8-180f-450a-b246-7a095ab9e359",
     "keyword": null,
-    "answer": "¡Hola Kevin Flores! Soy VRIBOT UDH, tu asistente virtual 🤖",
+    "answer": "¡Hola Ana Melva! Soy VRIBOT UDH, tu asistente virtual 🤖",
     "options": {
       "media": null,
       "buttons": [],
       "capture": false,
       "delay": 0
     },
-    "from": "51933865935",
-    "refSerialize": "003e01a1618b12604e5009dca7734709"
+    "from": "51963422374",
+    "refSerialize": "bed5747b78198bc04d0d85669f740e20"
   },
   {
-    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
-    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
-    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
+    "ref": "ans_46b386d2-c3cf-4024-b796-b0e95e523917",
+    "keyword": "key_95a0db43-e043-4a95-a37f-b6a9b8126d46",
+    "answer": "*Elige una opción entre (0-6)*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach\n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*\n6️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
     "options": {
       "buttons": [],
       "capture": true,
@@ -55,85 +47,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
-    "from": "51933865935"
+    "refSerialize": "e9a2f633e251fd3f3a58d9b88b57798c",
+    "from": "51963422374"
   },
   {
-    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
-    "from": "51933865935"
-  },
-  {
-    "ref": "a91ee4c3-681d-40cd-a1c6-f98cf153d36c",
-    "keyword": null,
-    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51933865935",
-    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
-  },
-  {
-    "ref": "00620f53-07c6-42b4-8f7e-be9c183c3db3",
-    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "answer": "__end_flow__",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51933865935",
-    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
-  },
-  {
-    "ref": "01ed7409-bc32-420a-ba09-6c4f20edf55d",
-    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
-    "answer": "Opciones",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "81593e657953eced63679438e20dd8f1"
-  },
-  {
-    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
-    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
-    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
-    "from": "51933865935"
-  },
-  {
-    "ref": "6e8487b1-dfcd-4dc3-a324-e2590ff35fc6",
-    "keyword": "b0e936a41ebc047de1cbe003fcca6c04",
+    "ref": "a43bb524-715f-4779-960b-55d4771dfa9d",
+    "keyword": "e9a2f633e251fd3f3a58d9b88b57798c",
     "answer": "3",
     "options": {},
-    "from": "51933865935",
+    "from": "51963422374",
     "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
   },
   {
-    "ref": "ans_e4e3d89f-c1f2-4cd0-b4e5-4e446ef0f565",
-    "keyword": "key_647fb767-ad26-4b2e-9a01-cac4c93bf197",
-    "answer": "Ingresa tu código o escribe 0️⃣ para cancelar",
+    "ref": "ans_b46c63a8-58b9-4c47-9a16-773217855160",
+    "keyword": "key_57c0dd9b-a883-4589-907e-54d23d1481c2",
+    "answer": "*Elige una opción entre (0-4):*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Apoyo del soporte técnico\n\n0️⃣ Volver",
     "options": {
       "buttons": [],
       "capture": true,
@@ -142,78 +70,47 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "716eb9fe3ac5b781551149be1e253375",
-    "from": "51933865935"
+    "refSerialize": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "from": "51963422374"
   },
   {
-    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
-    "from": "51933865935"
+    "ref": "3709ad49-cd77-4373-b091-1ceef86e1509",
+    "keyword": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "answer": "1",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
   },
   {
-    "ref": "5427f108-f5ca-4a78-a91b-110ce4773449",
+    "ref": "b26b1488-fdef-49ab-9140-b4e31c08c568",
     "keyword": null,
-    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
+    "answer": "Ana Melva, asegurate de haber seguido correctamente el manual de usuario 👇",
     "options": {
       "media": null,
       "buttons": [],
       "capture": false,
       "delay": 0
     },
-    "from": "51933865935",
-    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
+    "from": "51963422374",
+    "refSerialize": "02fdd88dd9350f030bdcfab582af8a4c"
   },
   {
-    "ref": "f8f64312-a67c-4f49-bbb6-63901e613c20",
-    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "answer": "__end_flow__",
+    "ref": "61ffe657-4d3b-4aa5-831d-b853d280b927",
+    "keyword": null,
+    "answer": "manual_tu_coach",
     "options": {
-      "media": null,
+      "media": "C:\\development\\whatsaaa\\builderbot-openai-assistants\\assets\\manual_de_usuario_tu_coach.pdf",
       "buttons": [],
       "capture": false,
       "delay": 0
     },
-    "from": "51933865935",
-    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+    "from": "51963422374",
+    "refSerialize": "522f45c4fd3af8a3cc2129f65289f5d0"
   },
   {
-    "ref": "4a9bbc08-c46c-4296-afc5-9e2a28e6a250",
-    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
-    "answer": "Opcion",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "743a3bd8abd988164c391e368ae4f29f"
-  },
-  {
-    "ref": "8e455e62-4e0d-4b3e-93de-b90448c9f7c9",
-    "keyword": "743a3bd8abd988164c391e368ae4f29f",
-    "answer": "Ljlhll",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "33b8bfb5afb6650362363134c56a5b53"
-  },
-  {
-    "ref": "3f8c1f60-76b9-4900-88fb-b568804bb549",
-    "keyword": "33b8bfb5afb6650362363134c56a5b53",
-    "answer": "Opciones",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "81593e657953eced63679438e20dd8f1"
-  },
-  {
-    "ref": "ans_50461019-f598-48c1-810b-9cefe3d114bf",
-    "keyword": "key_dfc41f28-668f-4561-8a1e-e1dbce702ef4",
-    "answer": "*Solo puedes escoger una opción*:\n1️⃣ ¿Cómo me registro en el concurso de proyectos de investigación?\n2️⃣ ¿Cómo ingreso a tu coach?\n3️⃣ Quiero saber el estado de mi trámite\n4️⃣ ¿Cuál es el procedimiento para la revisiones?\n5️⃣ ¿Porqué tengo observaciones?\n6️⃣ Quiero hablar con el soporte\n7️⃣ Quiero hacer una pregunta más específica\n0️⃣ Cancelar",
+    "ref": "ans_b46c63a8-58b9-4c47-9a16-773217855160",
+    "keyword": "key_57c0dd9b-a883-4589-907e-54d23d1481c2",
+    "answer": "*Elige una opción entre (0-4):*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Apoyo del soporte técnico\n\n0️⃣ Volver",
     "options": {
       "buttons": [],
       "capture": true,
@@ -222,57 +119,83 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "b0e936a41ebc047de1cbe003fcca6c04",
-    "from": "51933865935"
+    "refSerialize": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "from": "51963422374"
   },
   {
-    "ref": "2086133f-a2c8-4623-8ddd-686013b89a9c",
-    "keyword": "b0e936a41ebc047de1cbe003fcca6c04",
+    "ref": "95a4af18-1a9e-406b-b21e-b18bb8ea1ca8",
+    "keyword": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "answer": "2",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "fe538676-0967-433b-b1b5-916a75334285",
+    "keyword": null,
+    "answer": "Ana Melva, asegurate de haber entrado a la página oficial aqui el link:👉🔗 https://tucoach.udh.edu.pe/",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51963422374",
+    "refSerialize": "61d752aab9cbdc502330548bd2016d83"
+  },
+  {
+    "ref": "c8ea45b5-ec69-4748-a014-e2c47db6816e",
+    "keyword": null,
+    "answer": "Si el link es correcto, le pedimos que vuelva a intentarlo más tarde, gracias por su comprensión 🥹🥹",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51963422374",
+    "refSerialize": "8c412f4e3bc07d1672afa3f07c0e9b14"
+  },
+  {
+    "ref": "ans_b46c63a8-58b9-4c47-9a16-773217855160",
+    "keyword": "key_57c0dd9b-a883-4589-907e-54d23d1481c2",
+    "answer": "*Elige una opción entre (0-4):*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Apoyo del soporte técnico\n\n0️⃣ Volver",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "from": "51963422374"
+  },
+  {
+    "ref": "115d9452-35c1-4824-9b59-db4f74e0e4a8",
+    "keyword": "87bbf7a97046e8793d7a6e0abf77bbb4",
     "answer": "3",
     "options": {},
-    "from": "51933865935",
+    "from": "51963422374",
     "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
   },
   {
-    "ref": "ans_e4e3d89f-c1f2-4cd0-b4e5-4e446ef0f565",
-    "keyword": "key_647fb767-ad26-4b2e-9a01-cac4c93bf197",
-    "answer": "Ingresa tu código o escribe 0️⃣ para cancelar",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "716eb9fe3ac5b781551149be1e253375",
-    "from": "51933865935"
-  },
-  {
-    "ref": "9c669ff3-189f-422c-ac59-9bfddc9e4b96",
-    "keyword": "716eb9fe3ac5b781551149be1e253375",
-    "answer": "2018110451",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "538febcd810ad5aa46bff28f98abcab3"
-  },
-  {
-    "ref": "69c6feca-6c29-4fdb-b169-70eedd645a3c",
+    "ref": "613a2fb3-0d5a-415b-aa0a-c9eb3df56df2",
     "keyword": null,
-    "answer": "Estimado kevin arnold flores pacheco, el estado de tu trámite está:  con observaciones",
+    "answer": "Ana Melva, le pedimos que vuelva a intentarlo más tarde, si el problema persiste contacte al soporte técnico\n 👨‍💻 Soporte Abimael\n 📱 901231876.",
     "options": {
       "media": null,
       "buttons": [],
       "capture": false,
       "delay": 0
     },
-    "from": "51933865935",
-    "refSerialize": "374fc31ede26fffaf4153165eace7cc4"
+    "from": "51963422374",
+    "refSerialize": "ee57254ad32bfbbb54f83587af2e81e5"
   },
   {
-    "ref": "ans_ce7e88c3-fc81-4ed5-9cd7-e7a15a8c45cd",
-    "keyword": "key_09afcb2c-8c78-461b-9232-ddd80d7b5efc",
-    "answer": "Quieres escoger otra opción?\n 1️⃣ Si\n 2️⃣ No",
+    "ref": "ans_b46c63a8-58b9-4c47-9a16-773217855160",
+    "keyword": "key_57c0dd9b-a883-4589-907e-54d23d1481c2",
+    "answer": "*Elige una opción entre (0-4):*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Apoyo del soporte técnico\n\n0️⃣ Volver",
     "options": {
       "buttons": [],
       "capture": true,
@@ -281,12 +204,161 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "3453654ca76255ca937412830ed07a18",
-    "from": "51933865935"
+    "refSerialize": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "from": "51963422374"
   },
   {
-    "ref": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "keyword": "key_68e68594-7903-40ab-a7da-f3c29d5b20fa",
+    "ref": "139f3176-7b73-4315-a914-959b518b1861",
+    "keyword": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "answer": "4",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "e8139b7fa2fbc1b48f247924f8ad1961"
+  },
+  {
+    "ref": "61703446-de8a-4469-a2a5-8ce06895ff99",
+    "keyword": null,
+    "answer": "Ana Melva, los contactos del soporte técnico son los siguientes: 👇\n👨‍💻 Soporte Abimael\n    📱 901231876\n",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51963422374",
+    "refSerialize": "5d86f348237549cf9e7147fa49be08c2"
+  },
+  {
+    "ref": "ans_b46c63a8-58b9-4c47-9a16-773217855160",
+    "keyword": "key_57c0dd9b-a883-4589-907e-54d23d1481c2",
+    "answer": "*Elige una opción entre (0-4):*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Apoyo del soporte técnico\n\n0️⃣ Volver",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "from": "51963422374"
+  },
+  {
+    "ref": "dcae6478-4549-4304-bdac-b628f42f5dc9",
+    "keyword": "87bbf7a97046e8793d7a6e0abf77bbb4",
+    "answer": "0",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "8f2014815c38046ebbfffe3ac4f3f41c"
+  },
+  {
+    "ref": "ans_46b386d2-c3cf-4024-b796-b0e95e523917",
+    "keyword": "key_95a0db43-e043-4a95-a37f-b6a9b8126d46",
+    "answer": "*Elige una opción entre (0-6)*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach\n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*\n6️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "e9a2f633e251fd3f3a58d9b88b57798c",
+    "from": "51963422374"
+  },
+  {
+    "ref": "a8b425de-66bf-4df1-a296-9a626e77925d",
+    "keyword": "e9a2f633e251fd3f3a58d9b88b57798c",
+    "answer": "5",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "d2b414a4bc0b3490276097c7513b4c8c"
+  },
+  {
+    "ref": "ans_57cd8f51-dd6d-4f9a-8816-ade98582d35c",
+    "keyword": "key_949ecac4-a2f3-402d-9439-12757aca49de",
+    "answer": "Ingresa tu consulta en *un solo mensaje*\n\n 0️⃣ Volver",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "42ee0403b5ae22158ee9e1994afddf69",
+    "from": "51963422374"
+  },
+  {
+    "ref": "3e734d31-7bad-4b0f-b13f-d288557df962",
+    "keyword": "42ee0403b5ae22158ee9e1994afddf69",
+    "answer": "Tengo problemas con turnitin, me observarln que tengo mucha similitud en mi documento, aue hago?",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "501255e6f3a322cd1887d4a63bb7ebcf"
+  },
+  {
+    "ref": "52e752d4-6f4e-4997-be1b-a62ab9fe244b",
+    "keyword": null,
+    "answer": "Para reducir la similitud en Turnitin, te recomiendo lo siguiente:\n\n1. **Parafrasea adecuadamente**: Reescribe las ideas en tus propias palabras.\n2. **Cita correctamente**: Asegúrate de que todas las fuentes están debidamente citadas.\n3. **Usa más referencias**: Incorpora distintas fuentes para diversificar el contenido.\n4. **Evita las citas largas**: Prefiere resumir o parafrasear.\n\nRealiza una revisión exhaustiva y asegúrate de que tu texto refleja tu propio análisis. Si persisten los problemas, contacta al soporte de VRI. \n\nSi tienes más consultas, no dudes en hacerlo 🤗.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51963422374",
+    "refSerialize": "6f3fc1636eac101c96999c6854b1bebc"
+  },
+  {
+    "ref": "ans_57cd8f51-dd6d-4f9a-8816-ade98582d35c",
+    "keyword": "key_949ecac4-a2f3-402d-9439-12757aca49de",
+    "answer": "Ingresa tu consulta en *un solo mensaje*\n\n 0️⃣ Volver",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "42ee0403b5ae22158ee9e1994afddf69",
+    "from": "51963422374"
+  },
+  {
+    "ref": "2ca628a1-5ac7-4cc2-a65e-055fbb1bf09a",
+    "keyword": "42ee0403b5ae22158ee9e1994afddf69",
+    "answer": "0",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "8f2014815c38046ebbfffe3ac4f3f41c"
+  },
+  {
+    "ref": "ans_46b386d2-c3cf-4024-b796-b0e95e523917",
+    "keyword": "key_95a0db43-e043-4a95-a37f-b6a9b8126d46",
+    "answer": "*Elige una opción entre (0-6)*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach\n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*\n6️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "e9a2f633e251fd3f3a58d9b88b57798c",
+    "from": "51963422374"
+  },
+  {
+    "ref": "abbf7b83-8063-4de9-9139-10b99a33066b",
+    "keyword": "e9a2f633e251fd3f3a58d9b88b57798c",
+    "answer": "4",
+    "options": {},
+    "from": "51963422374",
+    "refSerialize": "e8139b7fa2fbc1b48f247924f8ad1961"
+  },
+  {
+    "ref": "ans_20e3b44a-a28d-44fb-8d0b-c3025a6475eb",
+    "keyword": "key_26f13379-b4f5-48b8-bf7d-8a1841166e59",
     "answer": "__call_action__",
     "options": {
       "buttons": [],
@@ -296,33 +368,20 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "fe7d2401f2bf81009281a302c15d19f6",
-    "from": "51933865935"
+    "refSerialize": "c9bad7ddefb7d142d22b3e41c0d47df5",
+    "from": "51963422374"
   },
   {
-    "ref": "23958d49-7a2f-4b7a-877b-50d4faf5fedf",
+    "ref": "2c8f0b34-5654-42ef-8f27-cdbeb2da95ba",
     "keyword": null,
-    "answer": "🕓 Entiendo que ya no tienes más preguntas que hacerme; por ello, daré por finalizada mi atención. Si me necesitas de nuevo escribe *Opciones*. ¡Hasta pronto Kevin Flores😊!",
+    "answer": "🆘🆘🆘🆘‼ Un momento por favor, nuestro soporte se pondrá en contacto con usted estimado(a) Ana Melva ",
     "options": {
       "media": null,
       "buttons": [],
       "capture": false,
       "delay": 0
     },
-    "from": "51933865935",
-    "refSerialize": "af85d08a133cbf54d8bd372907f15b53"
-  },
-  {
-    "ref": "9702ea35-6298-4ab9-a991-7284f2c57d84",
-    "keyword": "ans_c0a32f04-f7f2-41a3-b8ae-35294dcbd3d4",
-    "answer": "__end_flow__",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51933865935",
-    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+    "from": "51963422374",
+    "refSerialize": "4f58aaaac4bb07dacf61c00ddc759341"
   }
 ]

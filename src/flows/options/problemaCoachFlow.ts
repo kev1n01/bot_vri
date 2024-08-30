@@ -4,7 +4,12 @@ import { TIMEOUT_SMALL, reset } from "../idle-custom"
 import { listFlow } from "./listFlow"
 
 export const problemaCoachFlow = addKeyword(EVENTS.ACTION)
-    .addAnswer(`*Elige una opción:*\n1️⃣ No puedo iniciar sesión\n2️⃣ No carga la página Tu Coach\n3️⃣ No descarga la constancia\n4️⃣ Conversar con el soporte técnico\n\n 0️⃣ Volver`,
+    .addAnswer(`*Elige una opción entre (0-4):*
+1️⃣ No puedo iniciar sesión
+2️⃣ No carga la página Tu Coach
+3️⃣ No descarga la constancia
+4️⃣ Apoyo del soporte técnico\n
+0️⃣ Volver`,
         { capture: true }, async (ctx, { fallBack, gotoFlow, flowDynamic }) => {
             if (!['1', '2', '3', '4', '0'].includes(ctx.body)) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
@@ -23,25 +28,20 @@ export const problemaCoachFlow = addKeyword(EVENTS.ACTION)
                     return gotoFlow(problemaCoachFlow)
                 case '2':
                     await flowDynamic(`${ctx.name}, asegurate de haber entrado a la página oficial aqui el link:👉🔗 https://tucoach.udh.edu.pe/`)
-                    await flowDynamic(`Si el link es correcto, le pedimos que espere un tiempo y vuelva a intentar, gracias.`)
+                    await flowDynamic(`Si el link es correcto, le pedimos que vuelva a intentarlo más tarde, gracias por su comprensión 🥹🥹`)
 
                     reset(ctx, gotoFlow, TIMEOUT_SMALL)
                     return gotoFlow(problemaCoachFlow)
                 case '3':
-
-                    await flowDynamic(`${ctx.name}, le pedimos que espere un tiempo y vuelva a intentar, si el problema persiste contacte con el soporte técnico👨‍💻.`)
+                    await flowDynamic(`${ctx.name}, le pedimos que vuelva a intentarlo más tarde, si el problema persiste contacte al soporte técnico\n 👨‍💻 Soporte Abimael\n 📱 901231876.`)
 
                     reset(ctx, gotoFlow, TIMEOUT_SMALL)
                     return gotoFlow(problemaCoachFlow)
                 case '4':
                     await flowDynamic(`${ctx.name}, los contactos del soporte técnico son los siguientes: 👇
-👨‍💻 soporte 1
-    📱 +51999999999
-    📧 soporte-tecnico-tucoach@udh.edu.pe
-
-👨‍💻 soporte 2
-    📱 +51999999999
-    📧 soporte-tecnico-tucoach@udh.edu.pe`)
+👨‍💻 Soporte Abimael
+    📱 901231876
+`)
 
                     reset(ctx, gotoFlow, TIMEOUT_SMALL)
                     return gotoFlow(problemaCoachFlow)

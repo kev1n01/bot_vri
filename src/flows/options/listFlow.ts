@@ -11,11 +11,18 @@ import { atentionFlow } from "./atentionFlow";
 
 export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Opciones"])
     .addAnswer(
-        `*Elige una opción*:\n1️⃣ Procedimiento para obtener constancia de originalidad\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a Tu Coach \n4️⃣ Conversar con el soporte VRI\n5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*\n 6️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta`,
+        `*Elige una opción entre (0-6)*:
+1️⃣ Procedimiento para obtener constancia de originalidad
+2️⃣ Estado de trámite
+3️⃣ Problemas al acceder a Tu Coach
+4️⃣ Conversar con el soporte VRI
+5️⃣ Conversar con DEACHE BOT  *(Inteligencia Artificial)*
+6️⃣ Horario de atención 🕑\n
+0️⃣ Cancelar consulta`,
         { capture: true }, async (ctx, { fallBack, endFlow, gotoFlow }) => {
             if (!['1', '2', '3', '4', '5', '6', '0'].includes(ctx.body)) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
-                return fallBack('Por favor elige una opción válida entre *(0-5)*')
+                return fallBack('Por favor elige una opción válida entre *(0-6)*')
             }
             if (ctx.body === '0') {
                 stop(ctx)

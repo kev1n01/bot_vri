@@ -26,15 +26,12 @@ const normalizeName = (name) => {
     }
 };
 
-const validateStatusTransactionReal = async (full_name) => {
+const validateStatusTransactionReal = async (code) => {
     try {
         const data_api = await fetch('https://hook.us2.make.com/73qjefn3kmdtexbemm143l84yfftf338');
         const data = await data_api.json();
-        console.log(data[0].nombres);
 
-        const normalizedFullName = normalizeName(full_name);
-
-        const transaction = data.find(item => normalizeName(item.nombres) === normalizedFullName);
+        const transaction = data.find(item => item.codigo === code);
 
         return transaction;
     } catch (error) {
@@ -45,6 +42,5 @@ const validateStatusTransactionReal = async (full_name) => {
 
 export {
     validateStatusTransactionReal,
-    validateStatusTransaction,
     normalizeName
 }

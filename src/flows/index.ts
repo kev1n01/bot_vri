@@ -9,5 +9,6 @@ import { estadoFlow } from './options/estadoFlow';
 import { problemaCoachFlow } from './options/problemaCoachFlow';
 import { soporteFlow } from './options/soporteFlow';
 import { soporteDeacheFlow } from './options/soporteDeacheFlow';
+import { atentionFlow } from './options/atentionFlow';
 
-export const flows = createFlow([welcomeFlow, byeFlow, continueFlow, procedimientoFlow, estadoFlow, problemaCoachFlow, soporteFlow, soporteDeacheFlow, listFlow, idleFlow])
+export const flows = createFlow([welcomeFlow, byeFlow, continueFlow, procedimientoFlow, estadoFlow, problemaCoachFlow, soporteFlow, soporteDeacheFlow, listFlow, idleFlow, atentionFlow])

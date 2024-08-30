@@ -10,17 +10,17 @@ import ServerHttp from "./http/index"
 const PORT = process.env?.PORT ?? 3008
 
 const main = async () => {
-    const adapterProvider = createProvider(Provider, { writeMyself: false, useBaileysStore: true, timeRelease: 1080000 })
+    const adapterProvider = createProvider(Provider, { writeMyself: true })
     const adapterDB = new Database({ filename: 'database.json' })
 
-    const { httpServer } = await createBot({
+    const { httpServer, handleCtx } = await createBot({
         flow: flows,
         provider: adapterProvider,
         database: adapterDB,
     }, {
         queue: {
-            timeout: 60000,
-            concurrencyLimit: 100
+            timeout: 20000,
+            concurrencyLimit: 300
         }
     })
 
@@ -29,6 +29,12 @@ const main = async () => {
 
     const server = new ServerHttp(adapterProvider)
     server.start()
+
+    adapterProvider.server.post('/v1/message-to-support', handleCtx(async (bot, req, res) => {
+        const { number, message } = req.body
+        await bot.sendMessage(number, message, {})
+        return res.end('send')
+    }))
 }
 
 main()
