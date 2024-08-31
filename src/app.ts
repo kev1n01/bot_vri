@@ -20,7 +20,7 @@ const main = async () => {
     }, {
         queue: {
             timeout: 20000,
-            concurrencyLimit: 200
+            concurrencyLimit: 100
         }
     })
 
