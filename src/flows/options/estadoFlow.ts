@@ -4,7 +4,8 @@ import { validateStatusTransactionReal, normalizeName } from "../../services/goo
 import { TIMEOUT_SMALL, reset } from "../idle-custom";
 import { listFlow } from "./listFlow";
 
-export const estadoFlow = addKeyword([EVENTS.ACTION, "estado", "avance"])
+
+export const estadoFlow = addKeyword([EVENTS.ACTION])
     .addAnswer(['Ingrese su *código* universitario\n\n0️⃣ Volver al menu principal'],
         { capture: true },
         async (ctx, { flowDynamic, gotoFlow, fallBack }) => {
