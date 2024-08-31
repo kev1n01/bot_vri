@@ -5,7 +5,7 @@ import { TIMEOUT_SMALL, reset } from "../idle-custom";
 import { listFlow } from "./listFlow";
 
 export const estadoFlow = addKeyword([EVENTS.ACTION, "estado", "avance"])
-    .addAnswer(['Ingrese su *código* universitario\n\n0️⃣ Volver'],
+    .addAnswer(['Ingrese su *código* universitario\n\n0️⃣ Volver al menu principal'],
         { capture: true },
         async (ctx, { flowDynamic, gotoFlow, fallBack }) => {
             if (ctx.body === '0') {
@@ -14,14 +14,14 @@ export const estadoFlow = addKeyword([EVENTS.ACTION, "estado", "avance"])
             }
             if (ctx.body.length != 10) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
-                return fallBack(`El código ${ctx.body} es incorrecto *(debe contener 10 números)*, intenta de nuevo\n\n0️⃣ Volver`);
+                return fallBack(`El código ${ctx.body} es incorrecto *(debe contener 10 números)*, intenta de nuevo\n\n0️⃣ Volver al menu principal`);
             }
 
             const res = await validateStatusTransactionReal(ctx.body)
 
             if (!res) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
-                return fallBack(`El código ${ctx.body} no se encuentra registrado, intenta de nuevo\n\n0️⃣ Volver`);
+                return fallBack(`El código ${ctx.body} no se encuentra registrado, intenta de nuevo\n\n0️⃣ Volver al menu principal`);
             }
 
             await flowDynamic(`Estimado(a) ${normalizeName(res.nombres)}, el *estado* de tu trámite es el siguiente:\n👉 ${res.estado}\nRevisado el ${res.fecha_atencion}`);

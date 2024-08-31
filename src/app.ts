@@ -10,7 +10,7 @@ import ServerHttp from "./http/index"
 const PORT = process.env?.PORT ?? 3008
 
 const main = async () => {
-    const adapterProvider = createProvider(Provider, { writeMyself: true })
+    const adapterProvider = createProvider(Provider, { writeMyself: false })
     const adapterDB = new Database({ filename: 'database.json' })
 
     const { httpServer, handleCtx } = await createBot({
@@ -20,7 +20,7 @@ const main = async () => {
     }, {
         queue: {
             timeout: 20000,
-            concurrencyLimit: 300
+            concurrencyLimit: 200
         }
     })
 

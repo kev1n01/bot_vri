@@ -9,7 +9,7 @@ export const problemaCoachFlow = addKeyword(EVENTS.ACTION)
 2️⃣ No carga la página Tu Coach
 3️⃣ No descarga la constancia
 4️⃣ Apoyo del soporte técnico\n
-0️⃣ Volver`,
+0️⃣ Volver al menu principal`,
         { capture: true }, async (ctx, { fallBack, gotoFlow, flowDynamic }) => {
             if (!['1', '2', '3', '4', '0'].includes(ctx.body)) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
