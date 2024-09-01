@@ -6,6 +6,7 @@ import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
 import { flows } from './flows';
 import { httpInject } from "@builderbot-plugins/openai-assistants"
 import ServerHttp from "./http/index"
+import { numberClean } from "./utils/numberClean";
 
 const PORT = process.env?.PORT
 
@@ -33,6 +34,9 @@ const main = async () => {
     adapterProvider.server.post('/v1/message-to-support', handleCtx(async (bot, req, res) => {
         const { number, message } = req.body
         await bot.sendMessage(number, message, {})
+        const toMute = numberClean(message)
+        await bot.sendMessage(number, `❌ bot desactivado para el número ${toMute}`, {})
+        bot.blacklist.add(toMute)
         return res.end('send')
     }))
 }
