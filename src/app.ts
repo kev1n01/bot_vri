@@ -7,7 +7,7 @@ import { flows } from './flows';
 import { httpInject } from "@builderbot-plugins/openai-assistants"
 import ServerHttp from "./http/index"
 
-const PORT = process.env?.PORT ?? 3008
+const PORT = process.env?.PORT
 
 const main = async () => {
     const adapterProvider = createProvider(Provider, { writeMyself: false })

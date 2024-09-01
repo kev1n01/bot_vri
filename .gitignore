@@ -12,3 +12,4 @@ tmp/*
 *qr.png
 
 database.json
+.vercel
