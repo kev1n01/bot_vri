@@ -10,6 +10,7 @@ const timers = {};
 // Flow for handling inactivity
 const idleFlow = addKeyword(EVENTS.ACTION).addAction(
     async (ctx, { endFlow }) => {
+        stop(ctx)
         return endFlow('🕑 Puedes seguir consultando escribiendo *Menu*');
     }
 );
@@ -18,7 +19,6 @@ const idleFlow = addKeyword(EVENTS.ACTION).addAction(
 const start = (ctx: BotContext, gotoFlow: (a: TFlow) => Promise<void>, ms: number) => {
     timers[ctx.from] = setTimeout(() => {
         console.log(`User timeout: ${ctx.from} ${ctx.name} ${ms}`);
-        stop(ctx)
         return gotoFlow(idleFlow);
     }, ms);
 }

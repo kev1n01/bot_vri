@@ -11,6 +11,7 @@ export const soporteFlow = addKeyword(EVENTS.ACTION)
         const isAfterClosing = time >= '17:55:00';
         if (isBeforeOpening || isDuringLunchBreak || isAfterClosing || isWeekendNoWork) {
             await flowDynamic(`En estos momentos el soporte no está disponible, por estar fuera de horario de atención (Lunes a viernes de 8am - 1pm y de 3pm - 6pm), accede al menu principal escribiendo "*Menu*"`)
+            return
         }
 
         await flowDynamic(`🆘🆘🆘🆘‼ Un momento por favor, nuestro soporte se pondrá en contacto, estimado(a) ${ctx.name} `)
