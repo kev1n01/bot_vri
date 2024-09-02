@@ -1,7 +1,7 @@
 import { EVENTS, addKeyword } from '@builderbot/bot'
 import { BotContext, TFlow } from '@builderbot/bot/dist/types';
 
-const TIMEOUT_SMALL = 300000;
+const TIMEOUT_SMALL = 30000;
 const TIMEOUT_LARGE = 400000;
 
 // Object to store timers for each user
@@ -10,8 +10,7 @@ const timers = {};
 // Flow for handling inactivity
 const idleFlow = addKeyword(EVENTS.ACTION).addAction(
     async (ctx, { endFlow }) => {
-        stop(ctx)
-        return endFlow('🕑 Puedes seguir consultando escribiendo *Menu*');
+        return endFlow();
     }
 );
 
