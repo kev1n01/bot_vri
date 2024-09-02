@@ -19,7 +19,7 @@ export const soporteFlow = addKeyword(EVENTS.ACTION)
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
                 },
-                body: JSON.stringify({ number: process.env?.ADMIN_NUMBER, message: `bot ${ctx.from}` })
+                body: JSON.stringify({ number: process.env?.ADMIN_NUMBER, message: `bot ${ctx.from}`, name: ctx.name })
             })
             return endFlow(`🆘🆘🆘🆘‼ Un momento por favor, nuestro soporte se pondrá en contacto, estimado(a) ${ctx.name} `)
         } catch (error) {

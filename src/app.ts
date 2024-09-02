@@ -32,10 +32,10 @@ const main = async () => {
     server.start()
 
     adapterProvider.server.post('/v1/message-to-support', handleCtx(async (bot, req, res) => {
-        const { number, message } = req.body
+        const { number, message, name } = req.body
         await bot.sendMessage(number, message, {})
         const toMute = numberClean(message)
-        await bot.sendMessage(number, `❌ bot desactivado para el número ${toMute}`, {})
+        await bot.sendMessage(number, `❌ bot desactivado para el número ${toMute} con nombre ${name}`, {})
         bot.blacklist.add(toMute)
         return res.end('send')
     }))
