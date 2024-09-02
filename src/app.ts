@@ -20,7 +20,7 @@ const main = async () => {
         database: adapterDB,
     }, {
         queue: {
-            timeout: 20000,
+            timeout: 200000,
             concurrencyLimit: 100
         }
     })

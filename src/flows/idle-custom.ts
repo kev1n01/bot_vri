@@ -1,7 +1,7 @@
 import { EVENTS, addKeyword } from '@builderbot/bot'
 import { BotContext, TFlow } from '@builderbot/bot/dist/types';
 
-const TIMEOUT_SMALL = 30000;
+const TIMEOUT_SMALL = 300000;
 const TIMEOUT_LARGE = 1200000;
 
 // Object to store timers for each user
