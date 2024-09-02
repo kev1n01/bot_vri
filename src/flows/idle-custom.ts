@@ -2,7 +2,7 @@ import { EVENTS, addKeyword } from '@builderbot/bot'
 import { BotContext, TFlow } from '@builderbot/bot/dist/types';
 
 const TIMEOUT_SMALL = 30000;
-const TIMEOUT_LARGE = 400000;
+const TIMEOUT_LARGE = 1200000;
 
 // Object to store timers for each user
 const timers = {};
@@ -39,10 +39,29 @@ const stop = (ctx: BotContext) => {
     }
 }
 
+const timerBot = {}
+
+const startBotDesactive = (ctx: BotContext) => {
+    console.log(`bot: ${ctx.from} ${ctx.name}`);
+    timerBot[ctx.from] = setTimeout(async () => {
+        await fetch(`${process.env?.SERVER_URL}/v1/message-to-support`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({ number: process.env?.ADMIN_NUMBER, message: `bot ${ctx.from}`, name: ctx.name })
+        }).then(() => {
+            console.log("solicitud activar bot enviada");
+        })
+    }, TIMEOUT_LARGE)
+}
+
 export {
     start,
     reset,
     stop,
+    startBotDesactive,
     idleFlow,
     TIMEOUT_SMALL,
     TIMEOUT_LARGE

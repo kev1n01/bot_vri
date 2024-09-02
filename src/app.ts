@@ -35,8 +35,15 @@ const main = async () => {
         const { number, message, name } = req.body
         await bot.sendMessage(number, message, {})
         const toMute = numberClean(message)
-        await bot.sendMessage(number, `❌ bot desactivado para el número ${toMute} con nombre ${name}`, {})
-        bot.blacklist.add(toMute)
+        const check = bot.blacklist.checkIf(toMute)
+        if (!check){
+            bot.blacklist.add(toMute)
+            await bot.sendMessage(number, `❌ bot desactivado para el número ${toMute} con nombre ${name}`, {})
+        }else{
+            bot.blacklist.remove(toMute)
+            await bot.sendMessage(number, `✅ bot activado para el número ${toMute} con nombre ${name}`, {})
+        }
+        
         return res.end('send')
     }))
 }

@@ -1,4 +1,5 @@
 import { EVENTS, addKeyword } from "@builderbot/bot"
+import { startBotDesactive } from "../idle-custom";
 
 export const soporteFlow = addKeyword(EVENTS.ACTION)
     .addAction(async (ctx, { endFlow }) => {
@@ -21,6 +22,7 @@ export const soporteFlow = addKeyword(EVENTS.ACTION)
                 },
                 body: JSON.stringify({ number: process.env?.ADMIN_NUMBER, message: `bot ${ctx.from}`, name: ctx.name })
             })
+            startBotDesactive(ctx)
             return endFlow(`🆘🆘🆘🆘‼ Un momento por favor, nuestro soporte se pondrá en contacto, estimado(a) ${ctx.name} `)
         } catch (error) {
             console.error('Error: de envio de mensaje de soporte', error)
