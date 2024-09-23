@@ -49,8 +49,15 @@ const main = async () => {
 
     adapterProvider.server.post('/v1/message', handleCtx(async (bot, req, res) => {
         const { number, message } = req.body
-        await bot.sendMessage(number, message, {})
-        return res.end('send')
+        const onWhats = await bot.provider.vendor.onWhatsApp(number)
+        if (onWhats[0]?.exists) {
+            await bot.sendMessage(number, message, {})
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            return res.end(JSON.stringify({ status: 'ok' }))
+        }else{
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            return res.end(JSON.stringify({ status: 'bad' }))
+        }
     }))
 }
 
