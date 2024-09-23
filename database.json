@@ -1,15 +1,15 @@
 [
   {
-    "ref": "883c8da1-c569-4079-9246-1a1c4384f5ba",
-    "keyword": "5a039c5e4c224e14809d5b5cd9fa2ef5",
-    "answer": "Hola",
+    "ref": "8ef4007c-bb4c-4935-a664-0c9611182045",
+    "keyword": "2e74335e4145533056b5beb9fd26fd63",
+    "answer": "Bot +51 941 701 325",
     "options": {},
     "from": "51933865935",
-    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
+    "refSerialize": "47cb1b921149bd46e3bfd7ea17456c1a"
   },
   {
-    "ref": "ans_6f93aba9-229e-40d8-a1a6-c968bf2c90cf",
-    "keyword": "key_6478a01d-fccf-47c6-9cae-25c1dfcec67c",
+    "ref": "ans_105a628c-51a7-4f2a-89c2-8eff74ae4240",
+    "keyword": "key_dee344c7-0fde-4db1-8f18-af7513d47636",
     "answer": "__call_action__",
     "options": {
       "buttons": [],
@@ -19,28 +19,33 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "7f1314f79b1fe207950368408c9d6981",
+    "refSerialize": "e55dc9366b19662a0b8d93576645d320",
     "from": "51933865935"
   },
   {
-    "ref": "bd087edf-f6c5-474b-88a2-9a6c9ee3a55f",
-    "keyword": "7f1314f79b1fe207950368408c9d6981",
-    "answer": "Estado",
-    "options": {},
+    "ref": "71262d15-38cd-487d-93b1-b18da28619d7",
+    "keyword": null,
+    "answer": "❌ bot desactivado para el número 51941701325 ",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
     "from": "51933865935",
-    "refSerialize": "19826ee2ae0e8509f6c3409b1df65142"
+    "refSerialize": "0fbb6ab35d1be098ea5e9190f3787976"
   },
   {
-    "ref": "3163d5d1-4e8f-41e5-a2ed-d0a278f2ae2a",
-    "keyword": "19826ee2ae0e8509f6c3409b1df65142",
-    "answer": "Bot +51 960 287 263",
+    "ref": "f29194bb-50ea-4b19-9969-57aa742aacca",
+    "keyword": "e55dc9366b19662a0b8d93576645d320",
+    "answer": "Bot 941 701 325",
     "options": {},
     "from": "51933865935",
-    "refSerialize": "932f90eaa3ed9d5c6c264c3767ba0d1b"
+    "refSerialize": "48f55462902855294f7739acb90cf3fc"
   },
   {
-    "ref": "ans_487b0b52-7702-4e0c-91b0-c891619d9d77",
-    "keyword": "key_a1aae46f-df89-49f3-a3a2-b7bf53da8bd6",
+    "ref": "ans_105a628c-51a7-4f2a-89c2-8eff74ae4240",
+    "keyword": "key_dee344c7-0fde-4db1-8f18-af7513d47636",
     "answer": "__call_action__",
     "options": {
       "buttons": [],
@@ -50,13 +55,13 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "a5584296d5bdcc0c84adc511396688fb",
+    "refSerialize": "e55dc9366b19662a0b8d93576645d320",
     "from": "51933865935"
   },
   {
-    "ref": "b7b20343-7b22-4070-bdd6-aabdac064b5b",
+    "ref": "62a699fc-c89f-47f9-875b-967cec4c4187",
     "keyword": null,
-    "answer": "❌ bot desactivado para el número 51960287263 ",
+    "answer": "✅ bot activado para el número 51941701325 ",
     "options": {
       "media": null,
       "buttons": [],
@@ -64,225 +69,6 @@
       "delay": 0
     },
     "from": "51933865935",
-    "refSerialize": "56138973a07e4f24076e7c4906cf9222"
-  },
-  {
-    "ref": "ans_6f93aba9-229e-40d8-a1a6-c968bf2c90cf",
-    "keyword": "key_6478a01d-fccf-47c6-9cae-25c1dfcec67c",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "7f1314f79b1fe207950368408c9d6981",
-    "from": "51945822138"
-  },
-  {
-    "ref": "c6cfd367-647d-457a-9d88-6faa7b1f4bab",
-    "keyword": null,
-    "answer": "¡Hola Kevin Flores! Soy VRIBOT UDH, tu asistente virtual 🤖",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51945822138",
-    "refSerialize": "003e01a1618b12604e5009dca7734709"
-  },
-  {
-    "ref": "ans_fe39a5a1-7460-47b1-a1ac-53390271113a",
-    "keyword": "key_15dc2a24-3c8c-4839-9849-edbfba776eb7",
-    "answer": "*MENU PRINCIPAL*\n*Elige una opción entre (0-5)*:\n1️⃣ Procedimiento para obtener CONSTANCIA DE ORIGINALIDAD\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a TU COACH\n4️⃣ Conversar con el soporte VRI\n5️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "55a4143a608dc7822a72136c0bb395eb",
-    "from": "51945822138"
-  },
-  {
-    "ref": "f8d5c57e-7221-4ae2-9202-deb8c229ae60",
-    "keyword": "a5584296d5bdcc0c84adc511396688fb",
-    "answer": "Hola",
-    "options": {},
-    "from": "51933865935",
-    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
-  },
-  {
-    "ref": "ans_6f93aba9-229e-40d8-a1a6-c968bf2c90cf",
-    "keyword": "key_6478a01d-fccf-47c6-9cae-25c1dfcec67c",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "7f1314f79b1fe207950368408c9d6981",
-    "from": "51933865935"
-  },
-  {
-    "ref": "91bd9e98-f695-4025-9dd0-43fbcfee9f73",
-    "keyword": "55a4143a608dc7822a72136c0bb395eb",
-    "answer": "_event_media__a2501c60-8b80-47b8-9c7e-bb9a3f9f1714",
-    "options": {},
-    "from": "51945822138",
-    "refSerialize": "0957a85eb130de7b4587f5b0a9cd927d"
-  },
-  {
-    "ref": "ans_fe39a5a1-7460-47b1-a1ac-53390271113a",
-    "keyword": "key_15dc2a24-3c8c-4839-9849-edbfba776eb7",
-    "answer": "Por favor elige una opción válida entre *(0-5)*",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "55a4143a608dc7822a72136c0bb395eb",
-    "from": "51945822138"
-  },
-  {
-    "ref": "ans_6f93aba9-229e-40d8-a1a6-c968bf2c90cf",
-    "keyword": "key_6478a01d-fccf-47c6-9cae-25c1dfcec67c",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "7f1314f79b1fe207950368408c9d6981",
-    "from": "51945822138"
-  },
-  {
-    "ref": "f3eec772-d10f-45c0-acb4-3e654bc0d847",
-    "keyword": null,
-    "answer": "¡Hola André! Soy VRIBOT UDH, tu asistente virtual 🤖",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51945822138",
-    "refSerialize": "149964a4f1f878334ffd51fc6a124191"
-  },
-  {
-    "ref": "ans_fe39a5a1-7460-47b1-a1ac-53390271113a",
-    "keyword": "key_15dc2a24-3c8c-4839-9849-edbfba776eb7",
-    "answer": "*MENU PRINCIPAL*\n*Elige una opción entre (0-5)*:\n1️⃣ Procedimiento para obtener CONSTANCIA DE ORIGINALIDAD\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a TU COACH\n4️⃣ Conversar con el soporte VRI\n5️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "55a4143a608dc7822a72136c0bb395eb",
-    "from": "51945822138"
-  },
-  {
-    "ref": "d844ad42-586a-4a84-8dcd-c07bb7a7332e",
-    "keyword": "55a4143a608dc7822a72136c0bb395eb",
-    "answer": "4",
-    "options": {},
-    "from": "51945822138",
-    "refSerialize": "e8139b7fa2fbc1b48f247924f8ad1961"
-  },
-  {
-    "ref": "ans_06f8d4c5-4c35-4b1f-ae64-7e1bf364082f",
-    "keyword": "key_aa5d1b26-bcc6-448c-8066-56402fffaf27",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "999fbaac34f0cccc7bb45b8454a059b1",
-    "from": "51945822138"
-  },
-  {
-    "ref": "7bd6a6c4-dbb6-4401-825b-bbc8671f0130",
-    "keyword": null,
-    "answer": "🆘🆘🆘🆘‼ Un momento por favor, nuestro soporte se pondrá en contacto con usted estimado(a) André ",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51945822138",
-    "refSerialize": "c52ec50d29367cd4ab035b820afad4a2"
-  },
-  {
-    "ref": "9c487e72-25a5-46b0-b3a4-a41f99471b12",
-    "keyword": "999fbaac34f0cccc7bb45b8454a059b1",
-    "answer": "zz",
-    "options": {},
-    "from": "51945822138",
-    "refSerialize": "7681bd03da7c827a0b4f4da94a354e5c"
-  },
-  {
-    "ref": "ans_6f93aba9-229e-40d8-a1a6-c968bf2c90cf",
-    "keyword": "key_6478a01d-fccf-47c6-9cae-25c1dfcec67c",
-    "answer": "__call_action__",
-    "options": {
-      "buttons": [],
-      "capture": false,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "7f1314f79b1fe207950368408c9d6981",
-    "from": "51901231876"
-  },
-  {
-    "ref": "0dbb2c67-bede-497b-ac66-d5fba79d46af",
-    "keyword": null,
-    "answer": "¡Hola Kevin Flores! Soy VRIBOT UDH, tu asistente virtual 🤖",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "51901231876",
-    "refSerialize": "003e01a1618b12604e5009dca7734709"
-  },
-  {
-    "ref": "ans_fe39a5a1-7460-47b1-a1ac-53390271113a",
-    "keyword": "key_15dc2a24-3c8c-4839-9849-edbfba776eb7",
-    "answer": "*MENU PRINCIPAL*\n*Elige una opción entre (0-5)*:\n1️⃣ Procedimiento para obtener CONSTANCIA DE ORIGINALIDAD\n2️⃣ Estado de trámite\n3️⃣ Problemas al acceder a TU COACH\n4️⃣ Conversar con el soporte VRI\n5️⃣ Horario de atención 🕑\n\n0️⃣ Cancelar consulta",
-    "options": {
-      "buttons": [],
-      "capture": true,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "55a4143a608dc7822a72136c0bb395eb",
-    "from": "51901231876"
+    "refSerialize": "8c199371abed0c8332377321455ea1ca"
   }
 ]

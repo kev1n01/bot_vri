@@ -7,7 +7,7 @@ import { listFlow } from "./listFlow"
 const ASSISTANT_ID = process.env?.ASSISTANT_ID ?? ''
 
 export const soporteDeacheFlow = addKeyword(EVENTS.ACTION)
-    .addAnswer(`Ingresa tu consulta en *un solo mensaje*\n\n 0️⃣ Volver al menu principal`, { capture: true }, async (ctx, { gotoFlow, flowDynamic, provider, state }) => {
+    .addAnswer(`Ingresa tu consulta en *un solo mensaje*\n\n 0️⃣ Volver al menu principal`, { capture: true, delay: 3000 }, async (ctx, { gotoFlow, flowDynamic, provider, state }) => {
         if (ctx.body === '0') {
             reset(ctx, gotoFlow, TIMEOUT_SMALL)
             return gotoFlow(listFlow)

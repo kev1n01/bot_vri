@@ -17,7 +17,7 @@ export const listFlow = addKeyword<Provider, Database>([EVENTS.ACTION, "Menu"])
 4️⃣ Conversar con el soporte VRI
 5️⃣ Horario de atención 🕑\n
 0️⃣ Cancelar consulta`,
-        { capture: true }, async (ctx, { fallBack, endFlow, gotoFlow }) => {
+        { capture: true, delay: 1000 }, async (ctx, { fallBack, endFlow, gotoFlow }) => {
             if (!['1', '2', '3', '4', '5', '0'].includes(ctx.body)) {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
                 return fallBack('Por favor elige una opción válida entre *(0-5)*')

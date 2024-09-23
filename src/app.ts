@@ -46,6 +46,12 @@ const main = async () => {
         
         return res.end('send')
     }))
+
+    adapterProvider.server.post('/v1/message', handleCtx(async (bot, req, res) => {
+        const { number, message } = req.body
+        await bot.sendMessage(number, message, {})
+        return res.end('send')
+    }))
 }
 
 main()

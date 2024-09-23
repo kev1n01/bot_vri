@@ -1,10 +1,10 @@
 import { EVENTS, addKeyword } from "@builderbot/bot"
 import { continueFlow } from "../continueFlow"
 import { join } from "path"
-import { TIMEOUT_SMALL, reset} from "../idle-custom"
+import { TIMEOUT_SMALL, reset } from "../idle-custom"
 
 export const procedimientoFlow = addKeyword(EVENTS.ACTION)
-    .addAction(async (ctx, { gotoFlow, flowDynamic, provider }) => {
+    .addAction({ delay: 3000 }, async (ctx, { gotoFlow, flowDynamic, provider }) => {
         await flowDynamic(`🎓 *PASOS PARA OBTENER CONSTANCIA DE ORIGINALIDAD* 📜
 ✅ *INSCRIPCIÓN AL TURNITIN* 💻💵
     👉 Paga el monto determinado a través del sistema UDH para inscribirte en la plataforma Turnitin.

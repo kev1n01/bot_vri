@@ -7,7 +7,7 @@ import { listFlow } from "./listFlow";
 
 export const estadoFlow = addKeyword([EVENTS.ACTION])
     .addAnswer(['Ingrese su *código* universitario\n\n0️⃣ Volver al menu principal'],
-        { capture: true },
+        { capture: true, delay: 2000 },
         async (ctx, { flowDynamic, gotoFlow, fallBack }) => {
             if (ctx.body === '0') {
                 reset(ctx, gotoFlow, TIMEOUT_SMALL)
