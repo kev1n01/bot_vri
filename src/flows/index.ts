@@ -11,4 +11,7 @@ import { soporteFlow } from './options/soporteFlow';
 import { atentionFlow } from './options/atentionFlow';
 import { userDisblock } from './options/userDisblock';
 
-export const flows = createFlow([welcomeFlow, byeFlow, continueFlow, procedimientoFlow, estadoFlow, problemaCoachFlow, soporteFlow, listFlow, idleFlow, atentionFlow, userDisblock])
+export const flows = createFlow([
+    userDisblock
+    // welcomeFlow, byeFlow, continueFlow, procedimientoFlow, estadoFlow, problemaCoachFlow, soporteFlow, listFlow, idleFlow, atentionFlow, userDisblock
+])

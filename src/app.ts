@@ -7,6 +7,7 @@ import { flows } from './flows';
 import { httpInject } from "@builderbot-plugins/openai-assistants"
 import ServerHttp from "./http/index"
 import { numberClean } from "./utils/numberClean";
+import { join } from "path"
 
 const PORT = process.env?.PORT
 
@@ -52,6 +53,9 @@ const main = async () => {
         const onWhats = await bot.provider.vendor.onWhatsApp(number)
         if (onWhats[0]?.exists) {
             await bot.sendMessage(number, message, {})
+            await bot.sendMessage(number, 'Puedes iniciar un trámite rellenando y presentando el siguente archivo 👇😎', {})
+            await bot.sendMessage(number, 'waa',{media: join(process.cwd(), 'assets', 'formulario_unico_de_tramite_fut.pdf')})
+            await bot.sendMessage(number, 'Presenta el FUT en nuestra ubicación 👇📌🗺️: https://maps.app.goo.gl/gxAdnCf35mSQERqx7', {})
             res.writeHead(200, { 'Content-Type': 'application/json' })
             return res.end(JSON.stringify({ status: 'ok' }))
         }else{
